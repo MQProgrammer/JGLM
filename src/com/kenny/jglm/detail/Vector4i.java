@@ -662,6 +662,22 @@ public class Vector4i {
 	 	return -1;
 	}
 	
+	/**
+	 * Sets the value of this vector by its component index.
+	 * @param i The index.
+	 * @param value Component value.
+	 */
+	public void set(int i, int value) {
+		if(i < 0 || i > length() - 1)
+			throw new IndexOutOfBoundsException("Value i must be with-in range of 0-3.");
+ 		switch(i) {
+ 			case 0: x = value; break;
+ 			case 1: y = value; break;
+ 			case 2: z = value; break;
+ 			case 3: w = value; break;
+ 		}
+	}
+	
 	// -- Unary arithmetic operators --
 	
 	/**

@@ -574,6 +574,21 @@ public class Vector3i {
  		return -1;
 	}
 	
+	/**
+	 * Sets the value of this vector by its component index.
+	 * @param i The index.
+	 * @param value Component value.
+	 */
+	public void set(int i, int value) {
+		if(i < 0 || i > length() - 1)
+			throw new IndexOutOfBoundsException("Value i must be with-in range of 0-2.");
+ 		switch(i) {
+ 			case 0: x = value; break;
+ 			case 1: y = value; break;
+ 			case 2: z = value; break;
+ 		}
+	}
+	
 	// -- Binary arithmetic operators --
 	
 	/**
@@ -909,6 +924,13 @@ public class Vector3i {
 	 */
 	public boolean equals(Vector3i v1, Vector3i v2) {
 		return v1.equals(v2);
+	}
+	
+	/**
+	 * Converts this vector to float vector.
+	 */
+	public Vector3f asFloat() {
+		return new Vector3f(x, y, z);
 	}
 	
 	/**
