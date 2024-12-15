@@ -82,6 +82,7 @@ import com.kenny.jglm.gtc.Quaternion;
 import com.kenny.jglm.gtc.Random;
 import com.kenny.jglm.gtc.Reciprocal;
 import com.kenny.jglm.gtc.Round;
+import com.kenny.jglm.gtx.AssosiatedMinMax;
 import com.kenny.jglm.gtx.ComponentWise;
 import com.kenny.jglm.gtx.Texture;
 import com.kenny.jglm.detail.FuncInteger;
@@ -136,6 +137,7 @@ import java.util.ArrayList;
  * @see Noise
  * @see Texture
  * @see ComponentWise
+ * @see AssosiatedMinMax
  * 
  * @author Kenny
  */
@@ -21495,6 +21497,2610 @@ public final class GLM {
 	}
 	
 	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compNormalize(Vector2i v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compNormalize2(Vector2i v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compNormalize(Vector3i v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compNormalize2(Vector3i v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compNormalize(Vector4i v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compNormalize2(Vector4i v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compNormalize(Vector2f v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compNormalize2(Vector2f v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compNormalize(Vector3f v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compNormalize2(Vector3f v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compNormalize(Vector4f v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compNormalize2(Vector4f v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2d compNormalize(Vector2d v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2d compNormalize2(Vector2d v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3d compNormalize(Vector3d v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3d compNormalize2(Vector3d v) {
+		return ComponentWise.compNormalize2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4d compNormalize(Vector4d v) {
+		return ComponentWise.compNormalize(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4d compNormalize2(Vector4d v) {
+		return ComponentWise.compNormalize2(v);
+	}
+
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compScale(Vector2i v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compScale2(Vector2i v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compScale(Vector3i v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compScale2(Vector3i v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compScale(Vector4i v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compScale2(Vector4i v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compScale(Vector2f v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compScale2(Vector2f v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compScale(Vector3f v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compScale2(Vector3f v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compScale(Vector4f v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compScale2(Vector4f v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2d compScale(Vector2d v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2d compScale2(Vector2d v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3d compScale(Vector3d v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3d compScale2(Vector3d v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4d compScale(Vector4d v) {
+		return ComponentWise.compScale(v);
+	}
+	
+	/**
+	 * Convert an integer vector to a normalized float vector. <br>
+	 * If the parameter value type is already a floating qualifier type, the value is passed through.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4d compScale2(Vector4d v) {
+		return ComponentWise.compScale2(v);
+	}
+	
+	/**
+	 * Find the maximum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final float compMax(Vector2f v) {
+		return ComponentWise.compMax(v);
+	}
+	
+	/**
+	 * Find the maximum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final float compMax(Vector3f v) {
+		return ComponentWise.compMax(v);
+	}
+	
+	/**
+	 * Find the maximum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final float compMax(Vector4f v) {
+		return ComponentWise.compMax(v);
+	}
+	
+	/**
+	 * Find the minimum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final float compMin(Vector2f v) {
+		return ComponentWise.compMin(v);
+	}
+	
+	/**
+	 * Find the minimum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final float compMin(Vector3f v) {
+		return ComponentWise.compMin(v);
+	}
+	
+	/**
+	 * Find the minimum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final float compMin(Vector4f v) {
+		return ComponentWise.compMin(v);
+	}
+	
+	/**
+	 * Add all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compAdd(Vector2f v) {
+		return ComponentWise.compAdd(v);
+	}
+	
+	/**
+	 * Add all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compAdd(Vector3f v) {
+		return ComponentWise.compAdd(v);
+	}
+	
+	/**
+	 * Add all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compAdd(Vector4f v) {
+		return ComponentWise.compAdd(v);
+	}
+	
+	/**
+	 * Multiply all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2f compMul(Vector2f v) {
+		return ComponentWise.compMul(v);
+	}
+	
+	/**
+	 * Multiply all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3f compMul(Vector3f v) {
+		return ComponentWise.compMul(v);
+	}
+	
+	/**
+	 * Multiply all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4f compMul(Vector4f v) {
+		return ComponentWise.compMul(v);
+	}
+	
+	/**
+	 * Find the maximum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final double compMax(Vector2d v) {
+		return ComponentWise.compMax(v);
+	}
+	
+	/**
+	 * Find the maximum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final double compMax(Vector3d v) {
+		return ComponentWise.compMax(v);
+	}
+	
+	/**
+	 * Find the maximum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final double compMax(Vector4d v) {
+		return ComponentWise.compMax(v);
+	}
+	
+	/**
+	 * Find the minimum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final double compMin(Vector2d v) {
+		return ComponentWise.compMin(v);
+	}
+	
+	/**
+	 * Find the minimum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final double compMin(Vector3d v) {
+		return ComponentWise.compMin(v);
+	}
+	
+	/**
+	 * Find the minimum value between single vector components.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final double compMin(Vector4d v) {
+		return ComponentWise.compMin(v);
+	}
+	
+	/**
+	 * Add all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2d compAdd(Vector2d v) {
+		return ComponentWise.compAdd(v);
+	}
+	
+	/**
+	 * Add all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3d compAdd(Vector3d v) {
+		return ComponentWise.compAdd(v);
+	}
+	
+	/**
+	 * Add all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4d compAdd(Vector4d v) {
+		return ComponentWise.compAdd(v);
+	}
+	
+	/**
+	 * Multiplies all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector2d compMul(Vector2d v) {
+		return ComponentWise.compMul(v);
+	}
+	
+	/**
+	 * Multiplies all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector3d compMul(Vector3d v) {
+		return ComponentWise.compMul(v);
+	}
+	
+	/**
+	 * Multiplies all vector components together.
+	 * 
+	 * @param v The value.
+	 * @see gtx_component_wise
+	 */
+	public static final Vector4d compMul(Vector4d v) {
+		return ComponentWise.compMul(v);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final int associatedMax(int x, int a, int y, int b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final float associatedMax(float x, float a, float y, float b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final double associatedMax(double x, double a, double y, double b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMax(Vector1i x, Vector1i a, Vector1i y, Vector1i b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMax(Vector2i x, Vector2i a, Vector2i y, Vector2i b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMax(Vector3i x, Vector3i a, Vector3i y, Vector3i b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMax(Vector4i x, Vector4i a, Vector4i y, Vector4i b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMax(Vector1f x, Vector1f a, Vector1f y, Vector1f b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMax(Vector2f x, Vector2f a, Vector2f y, Vector2f b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMax(Vector3f x, Vector3f a, Vector3f y, Vector3f b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMax(Vector4f x, Vector4f a, Vector4f y, Vector4f b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMax(Vector1d x, Vector1d a, Vector1d y, Vector1d b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMax(Vector2d x, Vector2d a, Vector2d y, Vector2d b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMax(Vector3d x, Vector3d a, Vector3d y, Vector3d b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMax(Vector4d x, Vector4d a, Vector4d y, Vector4d b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMax(int x, int a, Vector1i y, Vector1i b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMax(int x, int y, Vector2i a, Vector2i b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMax(int x, int y, Vector3i a, Vector3i b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMax(int x, int y, Vector4i a, Vector4i b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMax(float x, float a, Vector1f y, Vector1f b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMax(float x, float y, Vector2f a, Vector2f b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMax(float x, float y, Vector3f a, Vector3f b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMax(float x, float y, Vector4f a, Vector4f b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMax(double x, double a, Vector1d y, Vector1d b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMax(double x, double y, Vector2d a, Vector2d b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMax(double x, double y, Vector3d a, Vector3d b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMax(double x, double y, Vector4d a, Vector4d b) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMax(Vector1i x, int a, Vector1i y, int b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMax(Vector2i x, int a, Vector2i y, int b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMax(Vector3i x, int a, Vector3i y, int b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMax(Vector4i x, int a, Vector4i y, int b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMax(Vector1f x, float a, Vector1f y, float b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMax(Vector2f x, float a, Vector2f y, float b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMax(Vector3f x, float a, Vector3f y, float b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMax(Vector4f x, float a, Vector4f y, float b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMax(Vector1d x, double a, Vector1d y, double b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMax(Vector2d x, double a, Vector2d y, double b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMax(Vector3d x, double a, Vector3d y, double b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMax(Vector4d x, double a, Vector4d y, double b) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final int associatedMax(int x, int a, int y, int b, int z, int c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final float associatedMax(float x, float a, float y, float b, float z, float c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final double associatedMax(double x, double a, double y, double b, double z, double c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMax(Vector1i x, Vector1i a, Vector1i y, Vector1i b, 
+			Vector1i z, Vector1i c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMax(Vector2i x, Vector2i a, Vector2i y, Vector2i b, 
+			Vector2i z, Vector2i c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMax(Vector3i x, Vector3i a, Vector3i y, Vector3i b, 
+			Vector3i z, Vector3i c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMax(Vector4i x, Vector4i a, Vector4i y, Vector4i b, 
+			Vector4i z, Vector4i c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMax(Vector1f x, Vector1f a, Vector1f y, Vector1f b, 
+			Vector1f z, Vector1f c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMax(Vector2f x, Vector2f a, Vector2f y, Vector2f b, 
+			Vector2f z, Vector2f c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMax(Vector3f x, Vector3f a, Vector3f y, Vector3f b, 
+			Vector3f z, Vector3f c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMax(Vector4f x, Vector4f a, Vector4f y, Vector4f b, 
+			Vector4f z, Vector4f c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMax(Vector1d x, Vector1d a, Vector1d y, Vector1d b, 
+			Vector1d z, Vector1d c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMax(Vector2d x, Vector2d a, Vector2d y, Vector2d b, 
+			Vector2d z, Vector2d c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMax(Vector3d x, Vector3d a, Vector3d y, Vector3d b, 
+			Vector3d z, Vector3d c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Maximum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMax(Vector4d x, Vector4d a, Vector4d y, Vector4d b, 
+			Vector4d z, Vector4d c) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c);
+	}
+
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final int associatedMax(int x, int a, int y, int b, 
+			int z, int c, int w, int d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final float associatedMax(float x, float a, float y, float b, 
+			float z, float c, float w, float d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final double associatedMax(double x, double a, double y, double b, 
+			double z, double c, double w, double d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMax(Vector1i x, Vector1i a, Vector1i y, Vector1i b, 
+			Vector1i z, Vector1i c, Vector1i w, Vector1i d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMax(Vector2i x, Vector2i a, Vector2i y, Vector2i b, 
+			Vector2i z, Vector2i c, Vector2i w, Vector2i d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMax(Vector3i x, Vector3i a, Vector3i y, Vector3i b, 
+			Vector3i z, Vector3i c, Vector3i w, Vector3i d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMax(Vector4i x, Vector4i a, Vector4i y, Vector4i b, 
+			Vector4i z, Vector4i c, Vector4i w, Vector4i d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMax(Vector1f x, Vector1f a, Vector1f y, Vector1f b, 
+			Vector1f z, Vector1f c, Vector1f w, Vector1f d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMax(Vector2f x, Vector2f a, Vector2f y, Vector2f b, 
+			Vector2f z, Vector2f c, Vector2f w, Vector2f d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMax(Vector3f x, Vector3f a, Vector3f y, Vector3f b, 
+			Vector3f z, Vector3f c, Vector3f w, Vector3f d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMax(Vector4f x, Vector4f a, Vector4f y, Vector4f b, 
+			Vector4f z, Vector4f c, Vector4f w, Vector4f d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMax(Vector1d x, Vector1d a, Vector1d y, Vector1d b, 
+			Vector1d z, Vector1d c, Vector1d w, Vector1d d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMax(Vector2d x, Vector2d a, Vector2d y, Vector2d b, 
+			Vector2d z, Vector2d c, Vector2d w, Vector2d d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMax(Vector3d x, Vector3d a, Vector3d y, Vector3d b, 
+			Vector3d z, Vector3d c, Vector3d w, Vector3d d) {
+		return AssosiatedMinMax.associatedMax(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Maximum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMax(Vector4d x, Vector4d a, Vector4d y, Vector4d b, 
+			Vector4d z, Vector4d c, Vector4d w, Vector4d d) {
+		return AssosiatedMinMax.associatedMax(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final int associatedMin(int x, int a, int y, int b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final float associatedMin(float x, float a, float y, float b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final double associatedMin(double x, double a, double y, double b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMin(Vector1i x, Vector1i a, Vector1i y, Vector1i b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMin(Vector2i x, Vector2i a, Vector2i y, Vector2i b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMin(Vector3i x, Vector3i a, Vector3i y, Vector3i b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMin(Vector4i x, Vector4i a, Vector4i y, Vector4i b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMin(Vector1f x, Vector1f a, Vector1f y, Vector1f b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMin(Vector2f x, Vector2f a, Vector2f y, Vector2f b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMin(Vector3f x, Vector3f a, Vector3f y, Vector3f b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMin(Vector4f x, Vector4f a, Vector4f y, Vector4f b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMin(Vector1d x, Vector1d a, Vector1d y, Vector1d b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMin(Vector2d x, Vector2d a, Vector2d y, Vector2d b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMin(Vector3d x, Vector3d a, Vector3d y, Vector3d b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMin(Vector4d x, Vector4d a, Vector4d y, Vector4d b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMin(int x, int a, Vector1i y, Vector1i b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMin(int x, int y, Vector2i a, Vector2i b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMin(int x, int y, Vector3i a, Vector3i b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMin(int x, int y, Vector4i a, Vector4i b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMin(float x, float a, Vector1f y, Vector1f b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMin(float x, float y, Vector2f a, Vector2f b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMin(float x, float y, Vector3f a, Vector3f b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMin(float x, float y, Vector4f a, Vector4f b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMin(double x, double a, Vector1d y, Vector1d b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMin(double x, double y, Vector2d a, Vector2d b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMin(double x, double y, Vector3d a, Vector3d b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMin(double x, double y, Vector4d a, Vector4d b) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMin(Vector1i x, int a, Vector1i y, int b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMin(Vector2i x, int a, Vector2i y, int b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMin(Vector3i x, int a, Vector3i y, int b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMin(Vector4i x, int a, Vector4i y, int b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMin(Vector1f x, float a, Vector1f y, float b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMin(Vector2f x, float a, Vector2f y, float b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMin(Vector3f x, float a, Vector3f y, float b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMin(Vector4f x, float a, Vector4f y, float b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMin(Vector1d x, double a, Vector1d y, double b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMin(Vector2d x, double a, Vector2d y, double b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMin(Vector3d x, double a, Vector3d y, double b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 2 variables and returns 2 associated variable values.
+	 * 
+	 * @param x The first value.
+	 * @param y The second value.
+	 * @param a The first returned value.
+	 * @param b The second returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMin(Vector4d x, double a, Vector4d y, double b) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final int associatedMin(int x, int a, int y, int b, int z, int c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final float associatedMin(float x, float a, float y, float b, float z, float c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final double associatedMin(double x, double a, double y, double b, double z, double c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMin(Vector1i x, Vector1i a, Vector1i y, Vector1i b, 
+			Vector1i z, Vector1i c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMin(Vector2i x, Vector2i a, Vector2i y, Vector2i b, 
+			Vector2i z, Vector2i c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMin(Vector3i x, Vector3i a, Vector3i y, Vector3i b, 
+			Vector3i z, Vector3i c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMin(Vector4i x, Vector4i a, Vector4i y, Vector4i b, 
+			Vector4i z, Vector4i c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMin(Vector1f x, Vector1f a, Vector1f y, Vector1f b, 
+			Vector1f z, Vector1f c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMin(Vector2f x, Vector2f a, Vector2f y, Vector2f b, 
+			Vector2f z, Vector2f c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMin(Vector3f x, Vector3f a, Vector3f y, Vector3f b, 
+			Vector3f z, Vector3f c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMin(Vector4f x, Vector4f a, Vector4f y, Vector4f b, 
+			Vector4f z, Vector4f c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMin(Vector1d x, Vector1d a, Vector1d y, Vector1d b, 
+			Vector1d z, Vector1d c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMin(Vector2d x, Vector2d a, Vector2d y, Vector2d b, 
+			Vector2d z, Vector2d c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMin(Vector3d x, Vector3d a, Vector3d y, Vector3d b, 
+			Vector3d z, Vector3d c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+	
+	/**
+	 * Minimum comparison between 3 variables and returns 3 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMin(Vector4d x, Vector4d a, Vector4d y, Vector4d b, 
+			Vector4d z, Vector4d c) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c);
+	}
+
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final int associatedMin(int x, int a, int y, int b, 
+			int z, int c, int w, int d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final float associatedMin(float x, float a, float y, float b, 
+			float z, float c, float w, float d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final double associatedMin(double x, double a, double y, double b, 
+			double z, double c, double w, double d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1i associatedMin(Vector1i x, Vector1i a, Vector1i y, Vector1i b, 
+			Vector1i z, Vector1i c, Vector1i w, Vector1i d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2i associatedMin(Vector2i x, Vector2i a, Vector2i y, Vector2i b, 
+			Vector2i z, Vector2i c, Vector2i w, Vector2i d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3i associatedMin(Vector3i x, Vector3i a, Vector3i y, Vector3i b, 
+			Vector3i z, Vector3i c, Vector3i w, Vector3i d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4i associatedMin(Vector4i x, Vector4i a, Vector4i y, Vector4i b, 
+			Vector4i z, Vector4i c, Vector4i w, Vector4i d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1f associatedMin(Vector1f x, Vector1f a, Vector1f y, Vector1f b, 
+			Vector1f z, Vector1f c, Vector1f w, Vector1f d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2f associatedMin(Vector2f x, Vector2f a, Vector2f y, Vector2f b, 
+			Vector2f z, Vector2f c, Vector2f w, Vector2f d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3f associatedMin(Vector3f x, Vector3f a, Vector3f y, Vector3f b, 
+			Vector3f z, Vector3f c, Vector3f w, Vector3f d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4f associatedMin(Vector4f x, Vector4f a, Vector4f y, Vector4f b, 
+			Vector4f z, Vector4f c, Vector4f w, Vector4f d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector1d associatedMin(Vector1d x, Vector1d a, Vector1d y, Vector1d b, 
+			Vector1d z, Vector1d c, Vector1d w, Vector1d d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector2d associatedMin(Vector2d x, Vector2d a, Vector2d y, Vector2d b, 
+			Vector2d z, Vector2d c, Vector2d w, Vector2d d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector3d associatedMin(Vector3d x, Vector3d a, Vector3d y, Vector3d b, 
+			Vector3d z, Vector3d c, Vector3d w, Vector3d d) {
+		return AssosiatedMinMax.associatedMin(x, a, y, b, z, c, w, d);
+	}
+	
+	/**
+	 * Minimum comparison between 4 variables and returns 4 associated variable values
+	 * @param x The first value.
+	 * @param a The first returned value.
+	 * @param y The second value.
+	 * @param b The second returned value.
+	 * @param z The third value.
+	 * @param c The third returned value.
+	 * @param w The four value.
+	 * @param d The four returned value.
+	 * @see gtx_associated_min_max
+	 */
+	public static final Vector4d associatedMin(Vector4d x, Vector4d a, Vector4d y, Vector4d b, 
+			Vector4d z, Vector4d c, Vector4d w, Vector4d d) {
+		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
 	 * Sets the GLM's config {@link Setup#GLM_FORCE_DEPTH_ZERO_TO_ONE}.
 	 * 
 	 * @param force True or false.
@@ -21510,6 +24116,22 @@ public final class GLM {
 	 */
 	public static final void setupSetForceLeftHanded(boolean force) {
 		Setup.GLM_FORCE_LEFT_HANDED = force;
+	}
+	
+	/**
+	 * Sets the GLM's config {@link Setup#GLM_ENABLE_EXPERIMENTAL}.
+	 * 
+	 * @param enable True of false.
+	 */
+	public static final void setupSetEnableExperemental(boolean enable) {
+		Setup.GLM_ENABLE_EXPERIMENTAL = enable;
+	}
+	
+	/**
+	 * Returns true if GLM's config {@link Setup#GLM_ENABLE_EXPERIMENTAL}.
+	 */
+	public static final boolean setupIsEnableExperemental() {
+		return Setup.GLM_ENABLE_EXPERIMENTAL;
 	}
 	
 	/**
