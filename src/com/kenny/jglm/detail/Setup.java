@@ -29,6 +29,11 @@ public class Setup {
 	public static boolean      GLM_GTX_componentWise       = true;
 	public static boolean      GLM_GTX_mixed_product       = true;
 	public static boolean      GLM_GTX_texture             = true;
+	public static boolean      GLM_GTX_bit                 = true;
+	public static boolean      GLM_GTX_closest_point       = true;
+	public static boolean      GLM_GTX_color_encoding      = true;
+	public static boolean      GLM_GTX_color_space         = true;
+	public static boolean      GLM_GTX_color_space_YCoCg   = true;
 	
     /**
      * Clip control, use <code>GLM_FORCE_DEPTH_ZERO_TO_ONE</code> before using GLM <br>
