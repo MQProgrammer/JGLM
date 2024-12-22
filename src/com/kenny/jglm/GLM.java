@@ -83,6 +83,10 @@ import com.kenny.jglm.gtc.Random;
 import com.kenny.jglm.gtc.Reciprocal;
 import com.kenny.jglm.gtc.Round;
 import com.kenny.jglm.gtx.AssosiatedMinMax;
+import com.kenny.jglm.gtx.Bit;
+import com.kenny.jglm.gtx.ClosestPoint;
+import com.kenny.jglm.gtx.ColorEncoding;
+import com.kenny.jglm.gtx.ColorSpaceYCoCg;
 import com.kenny.jglm.gtx.ComponentWise;
 import com.kenny.jglm.gtx.Texture;
 import com.kenny.jglm.detail.FuncInteger;
@@ -138,8 +142,13 @@ import java.util.ArrayList;
  * @see Texture
  * @see ComponentWise
  * @see AssosiatedMinMax
+ * @see Bit
+ * @see ClosestPoint
+ * @see ColorEncoding
+ * @see ColorSpaceYCoCg
  * 
  * @author Kenny
+ * @author g-truc
  */
 public final class GLM {
 	
@@ -24098,6 +24107,1045 @@ public final class GLM {
 	public static final Vector4d associatedMin(Vector4d x, Vector4d a, Vector4d y, Vector4d b, 
 			Vector4d z, Vector4d c, Vector4d w, Vector4d d) {
 		return AssosiatedMinMax.associatedMin(x, y, a, b);
+	}
+	
+	/**
+	 * Find the highest bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final int highestBitValue(int Value) {
+		return Bit.highestBitValue(Value);   
+	}
+	
+	/**
+	 * Find the highest bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector1i highestBitValue(Vector1i Value) {
+		return Bit.highestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the highest bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector2i highestBitValue(Vector2i Value) {
+		return Bit.highestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the highest bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector3i highestBitValue(Vector3i Value) {
+		return Bit.highestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the highest bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector4i highestBitValue(Vector4i Value) {
+		return Bit.highestBitValue(Value);  
+	}
+
+	/**
+	 * Find the lowset bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final int lowestBitValue(int Value) {
+		return Bit.lowestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the lowset bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector1i lowestBitValue(Vector1i Value) {
+		return Bit.lowestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the lowset bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector2i lowestBitValue(Vector2i Value) {
+		return Bit.lowestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the lowset bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector3i lowestBitValue(Vector3i Value) {
+		return Bit.lowestBitValue(Value);  
+	}
+	
+	/**
+	 * Find the lowset bit set to 1 in a integer variable and return its value.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector4i lowestBitValue(Vector4i Value) {
+		return Bit.lowestBitValue(Value);  
+	}
+	
+	/**
+	 * Return the power of two number which value is just higher the input value. <br>
+	 * Deprecated, use {@link GLM#ceilPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final int powerOfTwoAbove(int value) {
+		return Bit.powerOfTwoAbove(value);  
+	}
+	
+	/**
+	 * Return the power of two number which value is just higher the input value. <br>
+	 * Deprecated, use {@link GLM#ceilPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector1i powerOfTwoAbove(Vector1i Value) {
+		return Bit.powerOfTwoAbove(Value);  
+	}
+	
+	/**
+	 * Return the power of two number which value is just higher the input value. <br>
+	 * Deprecated, use {@link GLM#ceilPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector2i powerOfTwoAbove(Vector2i Value) {
+		return Bit.powerOfTwoAbove(Value); 
+	}
+	
+	/**
+	 * Return the power of two number which value is just higher the input value. <br>
+	 * Deprecated, use {@link GLM#ceilPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector3i powerOfTwoAbove(Vector3i Value) {
+		return Bit.powerOfTwoAbove(Value); 
+	}
+	
+	/**
+	 * Return the power of two number which value is just higher the input value. <br>
+	 * Deprecated, use {@link GLM#ceilPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 */
+	public static final Vector4i powerOfTwoAbove(Vector4i Value) {
+		return Bit.powerOfTwoAbove(Value); 
+	}
+	
+	/**
+	 * Return the power of two number which value is just lower the input value. <br>
+	 * Deprecated, use {@link GLM#floorPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final int powerOfTwoBelow(int value) {
+		return Bit.powerOfTwoBelow(value); 
+	}
+	
+	/**
+	 * Return the power of two number which value is just lower the input value. <br>
+	 * Deprecated, use {@link GLM#floorPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector2i powerOfTwoBelow(Vector2i Value) {
+		return Bit.powerOfTwoBelow(Value); 
+	}
+	
+	/**
+	 * Return the power of two number which value is just lower the input value. <br>
+	 * Deprecated, use {@link GLM#floorPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector3i powerOfTwoBelow(Vector3i Value) {
+		return Bit.powerOfTwoBelow(Value); 
+	}
+	
+	/**
+	 * Return the power of two number which value is just lower the input value. <br>
+	 * Deprecated, use {@link GLM#floorPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param Value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector4i powerOfTwoBelow(Vector4i Value) {
+		return Bit.powerOfTwoBelow(Value);    
+	}
+	
+	/**
+	 * Return the power of two number which value is the closet to the input value.<br>
+	 * Deprecated, use {@link GLM#roundPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final int powerOfTwoNearest(int value) {
+		return Bit.powerOfTwoNearest(value);    
+	}
+	
+	/**
+	 * Return the power of two number which value is the closet to the input value.<br>
+	 * Deprecated, use {@link GLM#roundPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector1i powerOfTwoNearest(Vector1i Value) {
+		return Bit.powerOfTwoNearest(Value);    
+	}
+	
+	/**
+	 * Return the power of two number which value is the closet to the input value.<br>
+	 * Deprecated, use {@link GLM#roundPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector2i powerOfTwoNearest(Vector2i Value) {
+		return Bit.powerOfTwoNearest(Value);      
+	}
+	
+	/**
+	 * Return the power of two number which value is the closet to the input value.<br>
+	 * Deprecated, use {@link GLM#roundPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector3i powerOfTwoNearest(Vector3i Value) {
+		return Bit.powerOfTwoNearest(Value);
+	}
+	
+	/**
+	 * Return the power of two number which value is the closet to the input value.<br>
+	 * Deprecated, use {@link GLM#roundPowerOfTwo(int)} from <code>GTC_round</code> instead.
+	 * @param value The value.
+	 * @see gtx_bit
+	 * @see gtc_round
+	 */
+	public static final Vector4i powerOfTwoNearest(Vector4i Value) {
+		return Bit.powerOfTwoNearest(Value);
+	}
+	
+	/**
+	 * Find the point on a straight line which is the closet of a point.
+	 * @param point The point vector.
+	 * @param a The begin position of line.
+	 * @param b The end position of line.
+	 * @see gtx_closest_point
+	 */
+	public static final Vector3d closestPointOnLine(Vector3d point, Vector3d a, Vector3d b) {
+		return ClosestPoint.closestPointOnLine(point, a, b);
+	}
+	
+	/**
+	 * Find the point on a straight line which is the closet of a point.
+	 * @param point The point vector.
+	 * @param a The begin position of line.
+	 * @param b The end position of line.
+	 * @see gtx_closest_point
+	 */
+	public static final Vector3f closestPointOnLine(Vector3f point, Vector3f a, Vector3f b) {
+		return ClosestPoint.closestPointOnLine(point, a, b);
+	}
+	
+	/**
+	 * Find the point on a straight line which is the closet of a point.
+	 * @param point The point vector.
+	 * @param a The begin position of line.
+	 * @param b The end position of line.
+	 * @see gtx_closest_point
+	 */
+	public static final Vector2f closestPointOnLine(Vector2f point, Vector2f a, Vector2f b) {
+		return ClosestPoint.closestPointOnLine(point, a, b);
+	}
+	
+	/**
+	 * Find the point on a straight line which is the closet of a point.
+	 * @param point The point vector.
+	 * @param a The begin position of line.
+	 * @param b The end position of line.
+	 * @see gtx_closest_point
+	 */
+	public static final Vector2d closestPointOnLine(Vector2d point, Vector2d a, Vector2d b) {
+		return ClosestPoint.closestPointOnLine(point, a, b);
+	}
+	
+	/**
+	 * Convert a linear sRGB color to D65 YUV.
+	 * @param ColorLinearSRGB Linear color.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3f convertLinearSRGBToD65XYZ(Vector3f ColorLinearSRGB) {
+		return ColorEncoding.convertLinearSRGBToD65XYZ(ColorLinearSRGB);
+	}
+	
+	/**
+	 * Convert a linear sRGB color to D50 YUV.
+	 * @param ColorLinearSRGB Linear color.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3f convertLinearSRGBToD50XYZ(Vector3f ColorLinearSRGB) {
+		return ColorEncoding.convertLinearSRGBToD50XYZ(ColorLinearSRGB);
+	}
+	
+	/**
+	 * Convert a D65 YUV color to linear sRGB.
+	 * @param ColorD65XYZ Color D65 YUV.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3f convertD65XYZToLinearSRGB(Vector3f ColorD65XYZ) {
+		return ColorEncoding.convertD65XYZToLinearSRGB(ColorD65XYZ);
+	}
+	
+	/**
+	 * Convert a D65 YUV color to D50 YUV color.
+	 * @param ColorD65XYZ Color D65 YUV.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3f convertD65XYZToD50XYZ(Vector3f ColorD65XYZ) {
+		return ColorEncoding.convertD65XYZToD50XYZ(ColorD65XYZ);
+	}
+	
+	/**
+	 * Convert a linear sRGB color to D65 YUV.
+	 * @param ColorLinearSRGB Linear color.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3d convertLinearSRGBToD65XYZ(Vector3d ColorLinearSRGB) {
+		return ColorEncoding.convertLinearSRGBToD65XYZ(ColorLinearSRGB);
+	}
+	
+	/**
+	 * Convert a linear sRGB color to D50 YUV.
+	 * @param ColorLinearSRGB Linear color.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3d convertLinearSRGBToD50XYZ(Vector3d ColorLinearSRGB) {
+		return ColorEncoding.convertLinearSRGBToD50XYZ(ColorLinearSRGB);
+	}
+	
+	/**
+	 * Convert a D65 YUV color to linear sRGB.
+	 * @param ColorD65XYZ Color D65 YUV.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3d convertD65XYZToLinearSRGB(Vector3d ColorD65XYZ) {
+		return ColorEncoding.convertD65XYZToLinearSRGB(ColorD65XYZ);
+	}
+	
+	/**
+	 * Convert a D65 YUV color to D50 YUV color.
+	 * @param ColorD65XYZ Color D65 YUV.
+	 * @see gtx_color_encoding
+	 */
+	public static final Vector3d convertD65XYZToD50XYZ(Vector3d ColorD65XYZ) {
+		return ColorEncoding.convertD65XYZToD50XYZ(ColorD65XYZ);
+	}
+	
+	/**
+	 * Converts a color from HSV color space to its color in RGB color space.
+	 * @param hsvColor HSV color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector3f rgbColor(Vector3f hsvColor) {
+		return com.kenny.jglm.gtx.ColorSpace.rgbColor(hsvColor);
+	}
+	
+	/**
+	 * Converts a color from RGB color space to its color in HSV color space.
+	 * @param rgbColor RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector3f hsvColor(Vector3f rgbColor) {
+		return com.kenny.jglm.gtx.ColorSpace.hsvColor(rgbColor);
+	}
+	
+	/**
+	 * Build a saturation matrix.
+	 * @param s Saturation value.
+	 * @see gtx_color_space
+	 */
+	public static final Matrix4f saturation(float s) {
+		return com.kenny.jglm.gtx.ColorSpace.saturation(s);
+	}
+	
+	/**
+	 * Modify saturation of a color.
+	 * @param s Saturation value.
+	 * @param color The RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector3f saturation(float s, Vector3f color) {
+		return com.kenny.jglm.gtx.ColorSpace.saturation(s, color);
+	}
+	
+	/**
+	 * Modify saturation of a color.
+	 * @param s Saturation value.
+	 * @param color The RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector4f saturation(float s, Vector4f color) {
+		return com.kenny.jglm.gtx.ColorSpace.saturation(s, color);
+	}
+	
+	/**
+	 * Compute color luminosity associating ratios (0.33, 0.59, 0.11) to RGB canals.
+	 * @param color The RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final float luminosity(Vector3f color) {
+		return com.kenny.jglm.gtx.ColorSpace.luminosity(color);
+	}
+	
+	/**
+	 * Converts a color from HSV color space to its color in RGB color space.
+	 * @param hsvColor HSV color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector3d rgbColor(Vector3d hsvColor) {
+		return com.kenny.jglm.gtx.ColorSpace.rgbColor(hsvColor);
+	}
+	
+	/**
+	 * Converts a color from RGB color space to its color in HSV color space.
+	 * @param rgbColor RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector3d hsvColor(Vector3d rgbColor) {
+		return com.kenny.jglm.gtx.ColorSpace.hsvColor(rgbColor);
+	}
+	
+	/**
+	 * Build a saturation matrix.
+	 * @param s Saturation value.
+	 * @see gtx_color_space
+	 */
+	public static final Matrix4d saturation(double s) {
+		return com.kenny.jglm.gtx.ColorSpace.saturation(s);
+	}
+	
+	/**
+	 * Modify saturation of a color.
+	 * @param s Saturation value.
+	 * @param color The RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector3d saturation(double s, Vector3d color) {
+		return com.kenny.jglm.gtx.ColorSpace.saturation(s, color);
+	}
+	
+	/**
+	 * Modify saturation of a color.
+	 * @param s Saturation value.
+	 * @param color The RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final Vector4d saturation(double s, Vector4d color) {
+		return com.kenny.jglm.gtx.ColorSpace.saturation(s, color);
+	}
+	
+	/**
+	 * Compute color luminosity associating ratios (0.33, 0.59, 0.11) to RGB canals.
+	 * @param color The RGB color.
+	 * @see gtx_color_space
+	 */
+	public static final double luminosity(Vector3d color) {
+		return com.kenny.jglm.gtx.ColorSpace.luminosity(color);
+	}
+	
+	/**
+	 * Convert a color from RGB color space to YCoCg color space.
+	 * @param rgbColor RGB color.
+	 * @see gtx_color_space_YCoCg
+	 */
+	public static final Vector3f rgb2YCoCg(Vector3f rgbColor) {
+		return ColorSpaceYCoCg.rgb2YCoCg(rgbColor);
+	}
+	
+	/**
+	 * Convert a color from YCoCg color space to RGB color space.
+	 * @param YCoCgColor YCoCg color.
+	 * @see gtx_color_space_YCoCg
+	 */
+	public static final Vector3f YCoCg2rgb(Vector3f YCoCgColor) {
+		return ColorSpaceYCoCg.YCoCg2rgb(YCoCgColor);
+	}
+	
+	/**
+	 * Convert a color from RGB color space to YCoCg color space.
+	 * @param rgbColor RGB color.
+	 * @see gtx_color_space_YCoCg
+	 */
+	public static final Vector3d rgb2YCoCg(Vector3d rgbColor) {
+		return ColorSpaceYCoCg.rgb2YCoCg(rgbColor);
+	}
+	
+	/**
+	 * Convert a color from YCoCg color space to RGB color space.
+	 * @param YCoCgColor YCoCg color.
+	 * @see gtx_color_space_YCoCg
+	 */
+	public static final Vector3d YCoCg2rgb(Vector3d YCoCgColor) {
+		return ColorSpaceYCoCg.YCoCg2rgb(YCoCgColor);
+	}
+	
+	/**
+	 * Convert a color from RGB color space to YCoCgR color space.
+	 * @param rgbColor RBG color.
+	 * @see "YCoCg-R: A Color Space with RGB Reversibility and Low Dynamic Range"
+	 * @see gtx_color_space_YCoCg
+	 */
+	public static final Vector3i rgb2YCoCgR(Vector3i rgbColor) {
+		return ColorSpaceYCoCg.rgb2YCoCgR(rgbColor);
+	}
+	
+	/**
+	 * Convert a color from YCoCg color space to RGB color space.
+	 * @param YCoCgColor YCoCg color.
+	 * @see "YCoCg-R: A Color Space with RGB Reversibility and Low Dynamic Range"
+	 * @see gtx_color_space_YCoCg
+	 */
+	public static final Vector3i YCoCgR2rgb(Vector3i YCoCgColor) {
+		return ColorSpaceYCoCg.YCoCgR2rgb(YCoCgColor);
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final boolean isdenormal(float x) {
+		return GLM.epsilonNotEqual(x, (0), ScalarConstants.epsilon()) && GLM.abs(x) < Float.MAX_VALUE;
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final boolean isdenormal(double x) {
+		return GLM.epsilonNotEqual(x, (0), ScalarConstants.epsilon()) && GLM.abs(x) < Float.MAX_VALUE;
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector1b isdenormal(Vector1f x) {
+		return new Vector1b(isdenormal(x.x));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector2b isdenormal(Vector2f x) {
+		return new Vector2b(isdenormal(x.x), isdenormal(x.y));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector3b isdenormal(Vector3f x) {
+		return new Vector3b(isdenormal(x.x), isdenormal(x.y), isdenormal(x.z));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector4b isdenormal(Vector4f x) {
+		return new Vector4b(isdenormal(x.x), isdenormal(x.y), isdenormal(x.z), isdenormal(x.w));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector1b isdenormal(Vector1d x) {
+		return new Vector1b(isdenormal(x.x));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector2b isdenormal(Vector2d x) {
+		return new Vector2b(isdenormal(x.x), isdenormal(x.y));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector3b isdenormal(Vector3d x) {
+		return new Vector3b(isdenormal(x.x), isdenormal(x.y), isdenormal(x.z));
+	}
+	
+	/**
+	 * Returns true if x is a denormalized number. <br>
+	 * Numbers whose absolute value is too small to be represented in the normal format are <br>
+	 * represented in an alternate, denormalized format.<br>
+	 * This format is less precise but can represent values closer to zero.<br>
+	 * 
+	 * @param x The value.	
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/isnan.xml">GLSL isnan man page</a>
+	 * @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.3 Common Functions</a>
+	 */
+	public static final Vector4b isdenormal(Vector4d x) {
+		return new Vector4b(isdenormal(x.x), isdenormal(x.y), isdenormal(x.z), isdenormal(x.w));
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final float fmod(float x, float y){
+		return GLM.mod(new Vector1f(x), y).x;
+	}
+
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector1f fmod(Vector1f x, float y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector2f fmod(Vector2f x, float y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector3f fmod(Vector3f x, float y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector4f fmod(Vector4f x, float y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector1f fmod(Vector1f x, Vector1f y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector2f fmod(Vector2f x, Vector2f y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector3f fmod(Vector3f x, Vector3f y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector4f fmod(Vector4f x, Vector4f y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final double fmod(double x, double y){
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector1d fmod(Vector1d x, double y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector2d fmod(Vector2d x, double y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector3d fmod(Vector3d x, double y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector4d fmod(Vector4d x, double y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector1d fmod(Vector1d x, Vector1d y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector2d fmod(Vector2d x, Vector2d y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector3d fmod(Vector3d x, Vector3d y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Similar to 'mod' but with a different rounding and integer support. <br>
+	 * Returns <code>'x - y * trunc(x/y)' instead of 'x - y * floor(x/y)'</code>
+	 * @param x The first value.
+	 * @param y The second value.
+	 * 
+	 * @see gtx_common
+	 * @see <a href="http://stackoverflow.com/questions/7610631/glsl-mod-vs-hlsl-fmod">GLSL mod vs HLSL fmod</a>
+	 * @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/mod.xml">GLSL mod man page</a>
+	 */
+	public static final Vector4d fmod(Vector4d x, Vector4d y) {
+		return com.kenny.jglm.gtx.Common.fmod(x, y);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A open interval excludes 
+	 * its endpoints, and is denoted with square brackets.
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector1b openBounded(Vector1f Value, Vector1f Min, Vector1f Max) {
+		return com.kenny.jglm.gtx.Common.openBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A open interval excludes 
+	 * its endpoints, and is denoted with square brackets.
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector2b openBounded(Vector2f Value, Vector2f Min, Vector2f Max) {
+		return com.kenny.jglm.gtx.Common.openBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A open interval excludes 
+	 * its endpoints, and is denoted with square brackets.
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector3b openBounded(Vector3f Value, Vector3f Min, Vector3f Max) {
+		return com.kenny.jglm.gtx.Common.openBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A open interval excludes 
+	 * its endpoints, and is denoted with square brackets.
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector4b openBounded(Vector4f Value, Vector4f Min, Vector4f Max) {
+		return com.kenny.jglm.gtx.Common.openBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A closed interval includes 
+	 * its endpoints, and is denoted with square brackets. 
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector1b closeBounded(Vector1f Value, Vector1f Min, Vector1f Max) {
+		return com.kenny.jglm.gtx.Common.closeBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A closed interval includes 
+	 * its endpoints, and is denoted with square brackets. 
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector2b closeBounded(Vector2f Value, Vector2f Min, Vector2f Max) {
+		return com.kenny.jglm.gtx.Common.closeBounded(Value, Min, Max);
+	}
+
+	/**
+	 * Returns whether vector components values are within an interval. A closed interval includes 
+	 * its endpoints, and is denoted with square brackets. 
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector3b closeBounded(Vector3f Value, Vector3f Min, Vector3f Max) {
+		return com.kenny.jglm.gtx.Common.closeBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * Returns whether vector components values are within an interval. A closed interval includes 
+	 * its endpoints, and is denoted with square brackets. 
+	 * 
+	 * @param Value The value.
+	 * @param Min Min value.
+	 * @param Max Max value.
+	 * @see ext_vector_relational
+	 */
+	public static final Vector4b closeBounded(Vector4f Value, Vector4f Min, Vector4f Max) {
+		return com.kenny.jglm.gtx.Common.closeBounded(Value, Min, Max);
 	}
 	
 	/**
