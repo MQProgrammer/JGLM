@@ -146,6 +146,7 @@ import java.util.ArrayList;
  * @see ClosestPoint
  * @see ColorEncoding
  * @see ColorSpaceYCoCg
+ * @see Compatibility
  * 
  * @author Kenny
  * @author g-truc
@@ -25146,6 +25147,431 @@ public final class GLM {
 	 */
 	public static final Vector4b closeBounded(Vector4f Value, Vector4f Min, Vector4f Max) {
 		return com.kenny.jglm.gtx.Common.closeBounded(Value, Min, Max);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1f lerp(Vector1f x, Vector1f y, float a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2f lerp(Vector2f x, Vector2f y, float a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3f lerp(Vector3f x, Vector3f y, float a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4f lerp(Vector4f x, Vector4f y, float a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1d lerp(Vector1d x, Vector1d y, double a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2d lerp(Vector2d x, Vector2d y, double a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3d lerp(Vector3d x, Vector3d y, double a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4d lerp(Vector4d x, Vector4d y, double a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final float lerp(float x, float y, float a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final double lerp(double x, double y, double a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1f lerp(Vector1f x, Vector1f y, Vector1f a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2f lerp(Vector2f x, Vector2f y, Vector2f a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3f lerp(Vector3f x, Vector3f y, Vector3f a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4f lerp(Vector4f x, Vector4f y, Vector4f a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1d lerp(Vector1d x, Vector1d y, Vector1d a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2d lerp(Vector2d x, Vector2d y, Vector2d a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3d lerp(Vector3d x, Vector3d y, Vector3d a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4d lerp(Vector4d x, Vector4d y, Vector4d a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1f lerp(Vector1f x, Vector1f y, Vector1b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2f lerp(Vector2f x, Vector2f y, Vector2b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3f lerp(Vector3f x, Vector3f y, Vector3b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4f lerp(Vector4f x, Vector4f y, Vector4b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1d lerp(Vector1d x, Vector1d y, Vector1b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2d lerp(Vector2d x, Vector2d y, Vector2b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3d lerp(Vector3d x, Vector3d y, Vector3b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#mix(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4d lerp(Vector4d x, Vector4d y, Vector4b a) {
+		return com.kenny.jglm.gtx.Сompatibility.lerp(x, y, a);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final short saturate(short x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final int saturate(int x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final double saturate(double x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final float saturate(float x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1f saturate(Vector1f x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2f saturate(Vector2f x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3f saturate(Vector3f x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4f saturate(Vector4f x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1d saturate(Vector1d x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2d saturate(Vector2d x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3d saturate(Vector3d x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * HLSL alternativity of {@link Common#clamp(double, double, double) }.
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4d saturate(Vector4d x) {
+		return com.kenny.jglm.gtx.Сompatibility.saturate(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final boolean isfinite(int x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final boolean isfinite(float x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final boolean isfinite(double x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1b isfinite(Vector1i x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1b isfinite(Vector1f x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector1b isfinite(Vector1d x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2b isfinite(Vector2i x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2b isfinite(Vector2f x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector2b isfinite(Vector2d x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3b isfinite(Vector3i x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3b isfinite(Vector3f x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector3b isfinite(Vector3d x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4b isfinite(Vector4i x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4b isfinite(Vector4f x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
+	}
+	
+	/**
+	 * Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)
+	 * @see gtx_compatibility
+	 */
+	public static final Vector4b isfinite(Vector4d x) {
+		return com.kenny.jglm.gtx.Сompatibility.isfinite(x);
 	}
 	
 	/**
