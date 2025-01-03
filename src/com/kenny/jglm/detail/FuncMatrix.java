@@ -1,5 +1,7 @@
 package com.kenny.jglm.detail;
 
+import com.kenny.jglm.misc.Operator;
+
 /**
  * Implementations from <b>func_matrix.inl </b> API.
  * 
@@ -253,10 +255,13 @@ public class FuncMatrix {
 			Vector4f Vec2 = new Vector4f(m.get(1, 2), m.get(0, 2), m.get(0, 2), m.get(0, 2));
 			Vector4f Vec3 = new Vector4f(m.get(1, 3), m.get(0, 3), m.get(0, 3), m.get(0, 3));
 
-			Vector4f Inv0 = new Vector4f(Vec1.mul(Fac0).sub(Vec2.mul(Fac1)).add(Vec3.mul(Fac2)));
-			Vector4f Inv1 = new Vector4f(Vec0.mul(Fac0).sub(Vec2.mul(Fac3)).add(Vec3.mul(Fac4)));
-			Vector4f Inv2 = new Vector4f(Vec0.mul(Fac1).sub(Vec1.mul(Fac3)).add(Vec3.mul(Fac5)));
-			Vector4f Inv3 = new Vector4f(Vec0.mul(Fac2).sub(Vec1.mul(Fac4)).add(Vec2.mul(Fac5)));
+			// Apply multiplication in right order using Operator API, because if we do that linearly
+			// it can apply operation in not that priority. Yes Java is pain in the ass. People say 
+			// that C++ is difficult. Puff.
+			Vector4f Inv0 = new Vector4f(Operator.add(Operator.sub(Operator.mul(Vec1, Fac0), Operator.mul(Vec2, Fac1)), Operator.mul(Vec3, Fac2)));
+			Vector4f Inv1 = new Vector4f(Operator.add(Operator.sub(Operator.mul(Vec0, Fac0), Operator.mul(Vec2, Fac3)), Operator.mul(Vec3, Fac4)));
+			Vector4f Inv2 = new Vector4f(Operator.add(Operator.sub(Operator.mul(Vec0, Fac1), Operator.mul(Vec1, Fac3)), Operator.mul(Vec3, Fac5)));
+			Vector4f Inv3 = new Vector4f(Operator.add(Operator.sub(Operator.mul(Vec0, Fac2), Operator.mul(Vec1, Fac4)), Operator.mul(Vec2, Fac5)));
 
 			Vector4f SignA = new Vector4f(+1, -1, +1, -1);
 			Vector4f SignB = new Vector4f(-1, +1, -1, +1);
