@@ -36,7 +36,7 @@ public class Matrix4d {
 		this.value[0] = new Vector4d(1f, 0f, 0f, 0f);
 		this.value[1] = new Vector4d(0f, 1f, 0f, 0f);
 		this.value[2] = new Vector4d(0f, 0f, 1f, 0f);
-		this.value[3] = new Vector4d(0f, 0f, 1f, 0f);
+		this.value[3] = new Vector4d(0f, 0f, 0f, 1f);
 	}
 	
 	/**
@@ -725,10 +725,10 @@ public class Matrix4d {
 		final Vector4d SrcB3 = m2.get(3);
 
 		Matrix4d Result = new Matrix4d();
-		Result.set(0, SrcA0.mul(SrcB0.get(0)).add(SrcA1.mul(SrcB0.get(1))).add(SrcA2.mul(SrcB0.get(2))).add(SrcA3.mul(SrcB0.get(3))));
-		Result.set(1, SrcA0.mul(SrcB1.get(0)).add(SrcA1.mul(SrcB1.get(1))).add(SrcA2.mul(SrcB1.get(2))).add(SrcA3.mul(SrcB1.get(3))));
-		Result.set(2, SrcA0.mul(SrcB2.get(0)).add(SrcA1.mul(SrcB2.get(1))).add(SrcA2.mul(SrcB2.get(2))).add(SrcA3.mul(SrcB2.get(3))));
-		Result.set(3, SrcA0.mul(SrcB3.get(0)).add(SrcA1.mul(SrcB3.get(1))).add(SrcA2.mul(SrcB3.get(2))).add(SrcA3.mul(SrcB3.get(3))));
+		Result.set(0, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB0.get(0)), Operator.mul(SrcA1, SrcB0.get(1))), Operator.mul(SrcA2, SrcB0.get(2))), Operator.mul(SrcA3, SrcB0.get(3))));
+		Result.set(1, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB1.get(0)), Operator.mul(SrcA1, SrcB1.get(1))), Operator.mul(SrcA2, SrcB1.get(2))), Operator.mul(SrcA3, SrcB1.get(3))));
+		Result.set(2, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB2.get(0)), Operator.mul(SrcA1, SrcB2.get(1))), Operator.mul(SrcA2, SrcB2.get(2))), Operator.mul(SrcA3, SrcB2.get(3))));
+		Result.set(3, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB3.get(0)), Operator.mul(SrcA1, SrcB3.get(1))), Operator.mul(SrcA2, SrcB3.get(2))), Operator.mul(SrcA3, SrcB3.get(3))));
 		return Result;
 	}
 	
@@ -885,5 +885,24 @@ public class Matrix4d {
 		buf.append("\n");
 		buf.append("[").append(value[3].x).append(", ").append(value[3].y).append(", ").append(value[3].z).append(", ").append(value[3].w).append("]");
 		return buf.toString();
+	}
+	
+	// -- Utilities --
+	
+	/**
+	 * Store this matrix data into single-dimensional array.
+	 */
+	public double[] asArray() {
+		double data[] = new double[16];
+		int k = 0;
+		for(int i = 0; i < Matrix4d.length(); i++) {
+			Vector4d v = get(i);
+			data[k++] = v.x;
+			data[k++] = v.y;
+			data[k++] = v.z;
+			data[k++] = v.w;
+		}
+		
+		return data;
 	}
 }

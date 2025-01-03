@@ -6078,10 +6078,10 @@ public final class Operator {
 		final Vector4d SrcB3 = m2.get(3);
 
 		Matrix4d Result = new Matrix4d();
-		Result.set(0, SrcA0.mul(SrcB0.get(0)).add(SrcA1.mul(SrcB0.get(1))).add(SrcA2.mul(SrcB0.get(2))).add(SrcA3.mul(SrcB0.get(3))));
-		Result.set(1, SrcA0.mul(SrcB1.get(0)).add(SrcA1.mul(SrcB1.get(1))).add(SrcA2.mul(SrcB1.get(2))).add(SrcA3.mul(SrcB1.get(3))));
-		Result.set(2, SrcA0.mul(SrcB2.get(0)).add(SrcA1.mul(SrcB2.get(1))).add(SrcA2.mul(SrcB2.get(2))).add(SrcA3.mul(SrcB2.get(3))));
-		Result.set(3, SrcA0.mul(SrcB3.get(0)).add(SrcA1.mul(SrcB3.get(1))).add(SrcA2.mul(SrcB3.get(2))).add(SrcA3.mul(SrcB3.get(3))));
+		Result.set(0, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB0.get(0)), Operator.mul(SrcA1, SrcB0.get(1))), Operator.mul(SrcA2, SrcB0.get(2))), Operator.mul(SrcA3, SrcB0.get(3))));
+		Result.set(1, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB1.get(0)), Operator.mul(SrcA1, SrcB1.get(1))), Operator.mul(SrcA2, SrcB1.get(2))), Operator.mul(SrcA3, SrcB1.get(3))));
+		Result.set(2, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB2.get(0)), Operator.mul(SrcA1, SrcB2.get(1))), Operator.mul(SrcA2, SrcB2.get(2))), Operator.mul(SrcA3, SrcB2.get(3))));
+		Result.set(3, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB3.get(0)), Operator.mul(SrcA1, SrcB3.get(1))), Operator.mul(SrcA2, SrcB3.get(2))), Operator.mul(SrcA3, SrcB3.get(3))));
 		return Result;
 	}
 	
@@ -6381,10 +6381,10 @@ public final class Operator {
 		final Vector4f SrcB3 = m2.get(3);
 
 		Matrix4f Result = new Matrix4f();
-		Result.set(0, SrcA0.mul(SrcB0.get(0)).add(SrcA1.mul(SrcB0.get(1))).add(SrcA2.mul(SrcB0.get(2))).add(SrcA3.mul(SrcB0.get(3))));
-		Result.set(1, SrcA0.mul(SrcB1.get(0)).add(SrcA1.mul(SrcB1.get(1))).add(SrcA2.mul(SrcB1.get(2))).add(SrcA3.mul(SrcB1.get(3))));
-		Result.set(2, SrcA0.mul(SrcB2.get(0)).add(SrcA1.mul(SrcB2.get(1))).add(SrcA2.mul(SrcB2.get(2))).add(SrcA3.mul(SrcB2.get(3))));
-		Result.set(3, SrcA0.mul(SrcB3.get(0)).add(SrcA1.mul(SrcB3.get(1))).add(SrcA2.mul(SrcB3.get(2))).add(SrcA3.mul(SrcB3.get(3))));
+		Result.set(0, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB0.get(0)), Operator.mul(SrcA1, SrcB0.get(1))), Operator.mul(SrcA2, SrcB0.get(2))), Operator.mul(SrcA3, SrcB0.get(3))));
+		Result.set(1, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB1.get(0)), Operator.mul(SrcA1, SrcB1.get(1))), Operator.mul(SrcA2, SrcB1.get(2))), Operator.mul(SrcA3, SrcB1.get(3))));
+		Result.set(2, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB2.get(0)), Operator.mul(SrcA1, SrcB2.get(1))), Operator.mul(SrcA2, SrcB2.get(2))), Operator.mul(SrcA3, SrcB2.get(3))));
+		Result.set(3, Operator.add(Operator.add(Operator.add(Operator.mul(SrcA0, SrcB3.get(0)), Operator.mul(SrcA1, SrcB3.get(1))), Operator.mul(SrcA2, SrcB3.get(2))), Operator.mul(SrcA3, SrcB3.get(3))));
 		return Result;
 	}
 	
