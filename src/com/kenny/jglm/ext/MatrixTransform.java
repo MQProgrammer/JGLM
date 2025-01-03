@@ -251,7 +251,7 @@ public class MatrixTransform {
 	 */
 	public static final Matrix4f translate(Matrix4f m, Vector3f v) {
 		Matrix4f Result = new Matrix4f(m);
-		Result.set(3, Operator.mul(m.get(0), v.get(0)).add(Operator.mul(m.get(1), v.get(1))).add(Operator.mul(m.get(2), v.get(2))));
+		Result.set(3, Operator.add(Operator.add(Operator.add(Operator.mul(m.get(0), v.get(0)), Operator.mul(m.get(1), v.get(1))), Operator.mul(m.get(2), v.get(2))), m.get(3)));
 		return Result;
 	}
 	
@@ -264,7 +264,7 @@ public class MatrixTransform {
 	 */
 	public static final Matrix4d translate(Matrix4d m, Vector3d v) {
 		Matrix4d Result = new Matrix4d(m);
-		Result.set(3, Operator.mul(m.get(0), v.get(0)).add(Operator.mul(m.get(1), v.get(1))).add(Operator.mul(m.get(2), v.get(2))));
+		Result.set(3, Operator.add(Operator.add(Operator.add(Operator.mul(m.get(0), v.get(0)), Operator.mul(m.get(1), v.get(1))), Operator.mul(m.get(2), v.get(2))), m.get(3)));
 		return Result;
 	}
 	
@@ -422,9 +422,9 @@ public class MatrixTransform {
 	 */
 	public static final Matrix4f scale(Matrix4f m, Vector3f v) {
 		Matrix4f Result = new Matrix4f();	
-		Result.set(0, m.get(0).mul(v.get(0)));
-		Result.set(1, m.get(1).mul(v.get(1)));
-		Result.set(2, m.get(2).mul(v.get(2)));
+		Result.set(0, Operator.mul(m.get(0), v.get(0)));
+		Result.set(1, Operator.mul(m.get(1), v.get(1)));
+		Result.set(2, Operator.mul(m.get(2), v.get(2)));
 		Result.set(3, m.get(3));
 		return Result;
 	}
@@ -439,9 +439,9 @@ public class MatrixTransform {
 	 */
 	public static final Matrix4d scale(Matrix4d m, Vector3d v) {
 		Matrix4d Result = new Matrix4d();	
-		Result.set(0, m.get(0).mul(v.get(0)));
-		Result.set(1, m.get(1).mul(v.get(1)));
-		Result.set(2, m.get(2).mul(v.get(2)));
+		Result.set(0, Operator.mul(m.get(0), v.get(0)));
+		Result.set(1, Operator.mul(m.get(1), v.get(1)));
+		Result.set(2, Operator.mul(m.get(2), v.get(2)));
 		Result.set(3, m.get(3));
 		return Result;
 	}
