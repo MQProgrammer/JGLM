@@ -25575,6 +25575,110 @@ public final class GLM {
 	}
 	
 	/**
+	 * Create an identity quaternion.
+	 * @see gtx_quaternion
+	 */
+	public static final Quaternionf quat_identity() {
+		return com.kenny.jglm.gtx.Quaternion.quat_identity();
+	}
+	
+	/**
+	 * Create an identity quaternion.
+	 * @see gtx_quaternion
+	 */
+	public static final Quaterniond quat_identity_d() {
+		return com.kenny.jglm.gtx.Quaternion.quat_identity_d();
+	}
+
+	/**
+	 * Rotates a 3 components vector by a quaternion.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector3f rotate(Quaternionf q, Vector3f v) {
+		return com.kenny.jglm.gtx.Quaternion.rotate(q, v);
+	}
+
+	/**
+	 * Rotates a 3 components vector by a quaternion.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector4f rotate(Quaternionf q, Vector4f v) {
+		return com.kenny.jglm.gtx.Quaternion.rotate(q, v);
+	}
+	
+	/**
+	 * Rotates a 3 components vector by a quaternion.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector3d rotate(Quaterniond q, Vector3d v) {
+		return com.kenny.jglm.gtx.Quaternion.rotate(q, v);
+	}
+
+	/**
+	 * Rotates a 3 components vector by a quaternion.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector4d rotate(Quaterniond q, Vector4d v) {
+		return com.kenny.jglm.gtx.Quaternion.rotate(q, v);
+	}
+	
+	/**
+	 * Compute a cross product between a quaternion and a vector.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector3f cross(Vector3f v, Quaternionf q) {
+		return com.kenny.jglm.gtx.Quaternion.cross(v, q);
+	}
+
+	/**
+	 * Compute a cross product between a quaternion and a vector.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector3f cross(Quaternionf q, Vector3f v) {
+		return com.kenny.jglm.gtx.Quaternion.cross(q, v);
+	}
+	
+	/**
+	 * Compute a cross product between a quaternion and a vector.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector3d cross(Vector3d v, Quaterniond q) {
+		return com.kenny.jglm.gtx.Quaternion.cross(v, q);
+	}
+
+	/**
+	 * Compute a cross product between a quaternion and a vector.
+	 * 
+	 * @param q A quaternion.
+	 * @param v A vector.
+	 * @see gtx_quaternion
+	 */
+	public static final Vector3d cross(Quaterniond q, Vector3d v) {
+		return com.kenny.jglm.gtx.Quaternion.cross(q, v);
+	}
+	
+	/**
 	 * Sets the GLM's config {@link Setup#GLM_FORCE_DEPTH_ZERO_TO_ONE}.
 	 * 
 	 * @param force True or false.
