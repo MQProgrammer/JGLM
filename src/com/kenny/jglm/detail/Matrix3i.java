@@ -785,4 +785,22 @@ public class Matrix3i {
 		buf.append("[").append(value[2].x).append(", ").append(value[2].y).append(", ").append(value[2].z).append("]");
 		return buf.toString();
 	}
+	
+	// -- Utilities --
+	
+	/**
+	 * Store this matrix data into single-dimensional array.
+	 */
+	public int[] asArray() {
+		int data[] = new int[9];
+		int k = 0;
+		for(int i = 0; i < Matrix3i.length(); i++) {
+			Vector3i v = get(i);
+			data[k++] = v.x;
+			data[k++] = v.y;
+			data[k++] = v.z;
+		}
+		
+		return data;
+	}
 }

@@ -785,4 +785,22 @@ public class Matrix3d {
 		buf.append("[").append(value[2].x).append(", ").append(value[2].y).append(", ").append(value[2].z).append("]");
 		return buf.toString();
 	}
+	
+	// -- Utilities --
+	
+	/**
+	 * Store this matrix data into single-dimensional array.
+	 */
+	public double[] asArray() {
+		double data[] = new double[9];
+		int k = 0;
+		for(int i = 0; i < Matrix3d.length(); i++) {
+			Vector3d v = get(i);
+			data[k++] = v.x;
+			data[k++] = v.y;
+			data[k++] = v.z;
+		}
+		
+		return data;
+	}
 }

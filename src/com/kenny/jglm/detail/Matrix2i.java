@@ -683,4 +683,19 @@ public class Matrix2i {
 		buf.append("[").append(value[1].x).append(", ").append(value[1].y).append("]");
 		return buf.toString();
 	}
+	
+	/**
+	 * Store this matrix data into single-dimensional array.
+	 */
+	public int[] asArray() {
+		int data[] = new int[4];
+		int k = 0;
+		for(int i = 0; i < Matrix2i.length(); i++) {
+			Vector2i v = get(i);
+			data[k++] = v.x;
+			data[k++] = v.y;
+		}
+		
+		return data;
+	}
 }

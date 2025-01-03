@@ -683,4 +683,21 @@ public class Matrix2f {
 		buf.append("[").append(value[1].x).append(", ").append(value[1].y).append("]");
 		return buf.toString();
 	}
+	
+	// -- Utilities --
+	
+	/**
+	 * Store this matrix data into single-dimensional array.
+	 */
+	public float[] asArray() {
+		float data[] = new float[4];
+		int k = 0;
+		for(int i = 0; i < Matrix2f.length(); i++) {
+			Vector2f v = get(i);
+			data[k++] = v.x;
+			data[k++] = v.y;
+		}
+		
+		return data;
+	}
 }
